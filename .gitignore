@@ -1,0 +1,4 @@
+# keep secrets out of the repository
+.env
+build/
+.dart_tool/
