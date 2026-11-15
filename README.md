@@ -36,7 +36,7 @@ After the first time, run `flutter run --dart-define-from-file=.env`.
 then : 
      run : flutter run --dart-define-from-file=.env
            flutter build apk --dart-define-from-file=.env # to build Android APK
-           ./build_web.sh        # flutter build web with the same flag
+           ./build_web.sh        # flutter build web with the same flag  the web links is ("https://agricsmart.vercel.app/"
 
            THE WEB LINK is "https://agricsmart.vercel.app/"
 
