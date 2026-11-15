@@ -21,10 +21,8 @@ get a bottom tab bar; screens 840 px and wider get a side rail.
 
 ## Set up
 
-No copying is needed. The zip is the whole project.
-
 1. Install Flutter 3.27 or newer (https://docs.flutter.dev/get-started/install).
-2. Unzip, then:
+2.    then:
    - **Windows:** double-click `setup.bat`
    - **Linux or macOS:** run `./setup.sh` in a terminal
 
@@ -35,27 +33,16 @@ permission, downloads the packages, and starts the app with the settings in
 
 After the first time, run `flutter run --dart-define-from-file=.env`.
 
-## The AI key
-
-The assistant's key is never written in the source code. It lives in `.env`
-(ignored by git; `.env.example` shows the format) and is passed in when the
-app is built:
+then : 
+     run : flutter run --dart-define-from-file=.env
+           flutter build apk --dart-define-from-file=.env # to build Android APK
+           ./build_web.sh        # flutter build web with the same flag
 
     flutter run --dart-define-from-file=.env
     flutter build apk --dart-define-from-file=.env
     ./build_web.sh        # flutter build web with the same flag
 
-Read this before publishing:
 
-- **Android APK:** the key is compiled into the app. It is not visible in
-  the code on GitHub, but a determined person can extract it from the APK.
-- **Website:** anything built into a website can be read by its visitors.
-  For a public site, deploy `server/worker.js`, put its address in `.env` as
-  `AI_PROXY_URL`, leave `AI_API_KEY` empty, and rebuild. Then the key stays
-  on the server.
-- The provider is set to Groq because the key starts with `gsk_`. For
-  another service, change `AI_PROVIDER` (groq, deepseek, gemini, openai,
-  anthropic) and `AI_MODEL` in `.env`.
 
 ## Build
 
@@ -69,7 +56,7 @@ Read this before publishing:
 ## The crop table
 
 `data/crops.csv` is the team's dataset. The app reads a Dart copy of it,
-`lib/data/crops_data.dart`. After editing the CSV, regenerate the copy:
+`lib/data/crops_data.dart`. location
 
     python3 tool/csv_to_dart.py
 
@@ -89,7 +76,7 @@ How the columns are used:
 | Which crops rotate | life_cycle, rotation_slots_occupied (perennials are shown in Learn only) |
 | Limits | input_labour_cost (budget), planting_window "needs flooding" (water) |
 
-Assumptions that are not in the CSV, all in code where you can change them:
+Assumptions 
 
 - Groundnuts and rice: 65% of harvested weight is sold at the shelled or
   milled price (`SALE_FRACTION` in `tool/csv_to_dart.py`).
