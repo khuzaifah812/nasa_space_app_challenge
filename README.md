@@ -19,6 +19,8 @@ get a bottom tab bar; screens 840 px and wider get a side rail.
 10 The year on your field, 11 Rotation options, 12 Side by side,
 13 One rotation in detail, 14 Before you decide, 15 Learn.
 
+the insight of the system:  ("https://www.canva.com/design/DAHa8Bo9MEc/o_rmKMBA69Ao-fNMR5BBww/edit")
+
 ## Set up
 
 1. Install Flutter 3.27 or newer (https://docs.flutter.dev/get-started/install).
